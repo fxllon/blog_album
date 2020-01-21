@@ -71,7 +71,7 @@ def compress(choose, des_dir, src_dir, file_list):
 def compress_photo():
     '''调用压缩图片的函数
     '''
-    src_dir, des_dir = "photos/", "mini_photos/"
+    src_dir, des_dir = "photos/", "min_photos/"
     
     if directory_exists(src_dir):
         if not directory_exists(src_dir):
@@ -131,7 +131,7 @@ def handle_photo():
     tmp = bubbleYear(list_info)
     bubble(tmp)
     final_dict = {"list": list_info}
-    with open("../data.json","w") as fp:
+    with open("../blog_album/data.json","w") as fp:
         json.dump(final_dict, fp)
 
 def cut_photo():
